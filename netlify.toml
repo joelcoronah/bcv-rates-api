@@ -1,0 +1,25 @@
+# Netlify configuration file
+# This file configures how Netlify builds and deploys your site
+
+[build]
+  # Directory to publish (not needed for serverless functions only)
+  publish = "public"
+  
+  # Build command (optional, Netlify will auto-detect)
+  command = "npm install"
+
+# Functions configuration
+[functions]
+  # Directory where Netlify Functions are located
+  directory = "netlify/functions"
+  
+  # Node.js version (use 18 for better ES modules support)
+  node_bundler = "esbuild"
+
+# Redirects configuration
+# Redirect all requests to the serverless function
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
