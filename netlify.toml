@@ -2,11 +2,9 @@
 # This file configures how Netlify builds and deploys your site
 
 [build]
-  # Directory to publish (not needed for serverless functions only)
-  publish = "public"
-  
   # Build command (optional, Netlify will auto-detect)
   command = "npm install"
+  # No publish directory needed for functions-only deployment
 
 # Functions configuration
 [functions]
